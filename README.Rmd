@@ -1,0 +1,52 @@
+---
+output: rmarkdown::github_document
+---
+
+# hormel
+
+Retrieve and Process 'Spamhaus' Zone/Host Metadata
+
+## Description
+
+The 'Spamhaus Project' is an international nonprofit organization that tracks spam and related cyber threats such as phishing, malware and botnets, provides realtime actionable and highly accurate threat intelligence to the Internet's major networks, corporations and security vendors, and works with law enforcement agencies to identify and pursue spam and malware sources worldwide. Methods are provided to retreive and process 'Spamhaus' data.
+
+## What's Inside The Tin
+
+The following functions are implemented:
+
+- `clear_drops`:	Clear cache of all "DROP" functions
+- `get_asndrop`:	Spamhaus ASN DROP List (ASN-DROP)
+- `get_drop`:	Spamhaus Don't Route Or Peer List
+- `get_dropv6`:	Spamhaus IPv6 DROP List (DROPv6)
+- `get_edrop`:	Spamhaus Extended DROP List (EDROP)
+
+## Installation
+
+```{r eval=FALSE}
+devtools::install_github("hrbrmstr/hormel")
+```
+
+```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+options(width=120)
+```
+
+## Usage
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(hormel)
+library(tidyverse)
+
+# current verison
+packageVersion("hormel")
+
+```
+
+```{r cache=TRUE}
+get_asndrop()
+
+get_drop()
+
+get_dropv6()
+
+get_edrop()
+```

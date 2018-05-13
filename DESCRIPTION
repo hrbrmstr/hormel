@@ -1,0 +1,29 @@
+Package: hormel
+Type: Package
+Title: Retrieve and Process 'Spamhaus' Zone/Host Metadata
+Version: 0.1.0
+Date: 2018-05-12
+Authors@R: c(
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0001-5670-2640"))
+  )
+Maintainer: Bob Rudis <bob@rud.is>
+Description: The 'Spamhaus Project' is an international nonprofit organization that tracks
+    spam and related cyber threats such as phishing, malware and botnets, provides
+    realtime actionable and highly accurate threat intelligence to the Internet's major 
+    networks, corporations and security vendors, and works with law enforcement agencies 
+    to identify and pursue spam and malware sources worldwide. Methods are provided to 
+    retreive and process 'Spamhaus' data.
+URL: https://github.com/hrbrmstr/hormel
+BugReports: https://github.com/hrbrmstr/hormel/issues
+Encoding: UTF-8
+License: AGPL
+Suggests:
+    testthat,
+    covr
+Depends:
+    R (>= 3.2.0)
+Imports:
+    httr,
+    memoise
+RoxygenNote: 6.0.1.9000
